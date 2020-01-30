@@ -7,3 +7,5 @@ Git repo about the smart table
 3. Create a merge/pull request when you wish to add your code to master
 4. Have atleast 1 other person bug test the changes
 5. Merge your branch into master
+
+Testing
