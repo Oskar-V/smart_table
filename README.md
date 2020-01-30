@@ -8,4 +8,10 @@ Git repo about the smart table
 4. Have atleast 1 other person bug test the changes
 5. Merge your branch into master
 
-Testing git config
+### Possible grading conditions
+* Table aesthetics
+* Phone control
+* Voice control
+* Feature count (Music, LEDs, screen display, motors)
+* Phone control interface aesthetics
+* Web interface controls
