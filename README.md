@@ -8,4 +8,4 @@ Git repo about the smart table
 4. Have atleast 1 other person bug test the changes
 5. Merge your branch into master
 
-Testing
+Testing2
