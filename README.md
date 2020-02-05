@@ -8,6 +8,13 @@ Git repo about the smart table
 4. Have atleast 1 other person bug test the changes
 5. Merge your branch into master
 
+### Possible feature-set
+* Google assistant integration
+* Android & iOS app(PWA) to control the table
+* Kontrollitav ekraan laua sees (touch screen)
+* Custom valgustus?
+* Standing desk
+
 ### Possible grading conditions
 * Table aesthetics
 * Phone control
