@@ -1,7 +1,13 @@
 # smart_table
 Git repo about the smart table
 
-### Contrubution instructions:
+## Running budget
+#### Starting budget 650€ (+100€ emergency fund)
+Item | Cost | Transport | New Budget
+:---:|:---:|:---:|:---:
+Raspberry PI 3 B+ | 49.90€ | xxx | xxx
+
+### Contrubution instructions
 1. Create a new branch
 2. Make all your changes in your own branch
 3. Create a merge/pull request when you wish to add your code to master
