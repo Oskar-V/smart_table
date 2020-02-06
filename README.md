@@ -11,9 +11,10 @@ Git repo about the smart table
 ### Possible feature-set
 * Google assistant integration
 * Android & iOS app(PWA) to control the table
-* Kontrollitav ekraan laua sees (touch screen)
-* Custom valgustus?
+* Embeded touch screen (32"?)
+* Custom LED lighting?
 * Standing desk
+* Phone notification on the screen
 
 ### Possible grading conditions
 * Table aesthetics
