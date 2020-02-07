@@ -6,6 +6,7 @@ Git repo about the smart table
 Item | Cost | Transport | New Budget
 :---:|:---:|:---:|:---:
 Raspberry PI 3 B+ | 49.90€ | xxx | xxx
+[SD Card](https://arvutitark.ee/est/tootekataloog/Foto-ja-videokaamerad-Malukaardid-jms-MicroSD-kaardid/397493) | 8.50€ | 0€ | xxx
 
 ### Contrubution instructions
 1. Create a new branch
