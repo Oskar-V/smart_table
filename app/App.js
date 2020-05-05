@@ -1,11 +1,30 @@
 import React, { Component, useState, useEffect } from 'react';
-import { ActivityIndicator, FlatList, Text, View, StyleSheet, SafeAreaView, Alert, Button, PermissionsAndroid } from 'react-native';
+import {
+    ActivityIndicator,
+    FlatList,
+    Text,
+    View,
+    StyleSheet,
+    SafeAreaView,
+    Alert,
+    Button,
+    PermissionsAndroid
+} from 'react-native';
+import SmsListener from 'react-native-android-sms-listener'
+
+
 import axios from 'axios';
 import Constants from 'expo-constants';
 
 function Separator() {
     return <View style={styles.separator} />;
 }
+
+
+const smsSubscription = SmsListener.addListener(message => {
+    console.info(message)
+})
+console.log(SmsListener);
 
 const requestAllPermissions = async () => {
     try {
@@ -50,6 +69,7 @@ export default class App extends Component {
             data: [],
             isLoading: false,
         };
+        
     }
 
     sendData = (props) => {
@@ -61,6 +81,7 @@ export default class App extends Component {
 
     componentDidMount() {
         console.log("App started");
+        console.log(smsSubscription);
     }
 
     render() {
@@ -82,7 +103,7 @@ export default class App extends Component {
                             this.setState({ colors: { red: r, green: g, blue: b } })
                         }}
                     />
-                    <Text style={{ backgroundColor: `rgb(${colors.red},${colors.green},${colors.blue})` }}></Text>
+                    <Text style={isLoading ? {} : { backgroundColor: `rgb(${colors.red},${colors.green},${colors.blue})` }}></Text>
                     <Separator />
                     <Button
                         title="request permissions"
