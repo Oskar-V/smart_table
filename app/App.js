@@ -10,9 +10,9 @@ import {
     Button,
     PermissionsAndroid
 } from 'react-native';
-import SmsListener from 'react-native-android-sms-listener'
-
-
+// import SmsListener from 'react-native-android-sms-listener';
+// import SmsRetriever from 'react-native-sms-retriever';
+import BackgroundTimer from 'react-native-background-timer';
 import axios from 'axios';
 import Constants from 'expo-constants';
 
@@ -20,11 +20,11 @@ function Separator() {
     return <View style={styles.separator} />;
 }
 
+// const smsSubscription = SmsListener.addListener(message => {
+//     Alert.alert("Received message:\n", message)
+//     console.info(message)
+// })
 
-const smsSubscription = SmsListener.addListener(message => {
-    console.info(message)
-})
-console.log(SmsListener);
 
 const requestAllPermissions = async () => {
     try {
@@ -33,23 +33,6 @@ const requestAllPermissions = async () => {
                 statuses.forEach((e) => console.log(e));
             }
         )
-        // const granted = await PermissionsAndroid.request(
-        //     PermissionsAndroid.PERMISSIONS.CAMERA,
-        //     {
-        //         title: "Cool Photo App Camera Permission",
-        //         message:
-        //             "Cool Photo App needs access to your camera " +
-        //             "so you can take awesome pictures.",
-        //         buttonNeutral: "Ask Me Later",
-        //         buttonNegative: "Cancel",
-        //         buttonPositive: "OK"
-        //     }
-        // );
-        // if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        //     console.log("You can use the camera");
-        // } else {
-        //     console.log("Camera permission denied");
-        // }
     } catch (err) {
         console.warn(err);
     }
@@ -66,22 +49,64 @@ export default class App extends Component {
                 green: 0,
                 blue: 0,
             },
-            data: [],
+            data: 0,
             isLoading: false,
         };
-        
+        this.intervalId;
     }
+
+    startTimer = (seconds) => {
+        console.log("Staring timer")
+        this.intervalId = BackgroundTimer.setInterval(() => {
+            const data = this.state.data + 1;
+            console.log(data)
+            this.setState({ data })
+        }, seconds * 1000);
+    }
+    stopTimer = () => {
+        console.log("Stopping the timer");
+        BackgroundTimer.clearInterval(this.intervalId)
+    }
+
+    _onPhoneNumberPressed = async () => {
+        try {
+            const phoneNumber = await SmsRetriever.requestPhoneNumber();
+            alert(`Phone Number: ${phoneNumber}`);
+        } catch (error) {
+            alert(`Phone Number Error: ${JSON.stringify(error)}`);
+        }
+    };
+
+    _onSmsListenerPressed = async () => {
+        try {
+            const registered = await SmsRetriever.startSmsRetriever();
+
+            if (registered) {
+                SmsRetriever.addSmsListener(this._onReceiveSms);
+            }
+
+            alert(`SMS Listener Registered: ${registered}`);
+        } catch (error) {
+            alert(`SMS Listener Error: ${JSON.stringify(error)}`);
+        }
+    };
+
+    // Handlers
+
+    _onReceiveSms = (event) => {
+        alert(event.message);
+        SmsRetriever.removeSmsListener();
+    };
 
     sendData = (props) => {
         console.log("Getting data");
-        axios.post("http://192.168.1.191", props).then((response) => {
+        axios.post("http://85.253.138.27/room/", props).then((response) => {
             // console.log(response.data);
         })
     }
 
     componentDidMount() {
         console.log("App started");
-        console.log(smsSubscription);
     }
 
     render() {
@@ -106,9 +131,29 @@ export default class App extends Component {
                     <Text style={isLoading ? {} : { backgroundColor: `rgb(${colors.red},${colors.green},${colors.blue})` }}></Text>
                     <Separator />
                     <Button
-                        title="request permissions"
+                        title="Request permissions"
                         onPress={requestAllPermissions}
                         style={styles.button} />
+                    <Separator />
+                    <Text>{data}</Text>
+                    <Separator />
+                    <Button
+                        title="Start timer"
+                        onPress={this.startTimer}
+                        style={styles.button} />
+                    <Separator />
+                    <Button
+                        title="Stop timer"
+                        onPress={this.stopTimer}
+                        style={styles.button} />
+                    <Separator />
+                    {/* <Button
+                        title="Start sms listener"
+                        onPress={
+                            this._onSmsListenerPressed()
+                        }
+                        style={styles.button} /> */}
+
                 </>)}
             </View>
         );
