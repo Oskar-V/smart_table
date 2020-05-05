@@ -1,12 +1,41 @@
 import React, { Component, useState, useEffect } from 'react';
-import { ActivityIndicator, FlatList, Text, View, StyleSheet, SafeAreaView, Alert, Button } from 'react-native';
+import { ActivityIndicator, FlatList, Text, View, StyleSheet, SafeAreaView, Alert, Button, PermissionsAndroid } from 'react-native';
 import axios from 'axios';
-import RNAndroidNotificationListener from 'react-native-android-notification-listener';
 import Constants from 'expo-constants';
 
 function Separator() {
     return <View style={styles.separator} />;
 }
+
+const requestAllPermissions = async () => {
+    try {
+        PermissionsAndroid.requestMultiple(Object.values(PermissionsAndroid.PERMISSIONS)).then(
+            (statuses) => {
+                statuses.forEach((e) => console.log(e));
+            }
+        )
+        // const granted = await PermissionsAndroid.request(
+        //     PermissionsAndroid.PERMISSIONS.CAMERA,
+        //     {
+        //         title: "Cool Photo App Camera Permission",
+        //         message:
+        //             "Cool Photo App needs access to your camera " +
+        //             "so you can take awesome pictures.",
+        //         buttonNeutral: "Ask Me Later",
+        //         buttonNegative: "Cancel",
+        //         buttonPositive: "OK"
+        //     }
+        // );
+        // if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        //     console.log("You can use the camera");
+        // } else {
+        //     console.log("Camera permission denied");
+        // }
+    } catch (err) {
+        console.warn(err);
+    }
+};
+
 
 export default class App extends Component {
     constructor(props) {
@@ -19,42 +48,9 @@ export default class App extends Component {
                 blue: 0,
             },
             data: [],
-            isLoading: true,
-            hasPermission: false,
-            lastNotification: null
+            isLoading: false,
         };
     }
-
-    handleOnPressPermissionButton = async () => {
-        RNAndroidNotificationListener.requestPermission();
-    };
-
-    handleAppStateChange = async nextAppState => {
-        RNAndroidNotificationListener.getPermissionStatus().then(status => {
-            setHasPermission(status !== 'denied');
-        });
-    };
-
-    
-    handleNotificationReceived = notification => {
-        setLastNotification(notification);
-    };
-
-    // useEffect(() => {
-    //     RNAndroidNotificationListener.getPermissionStatus().then(status => {
-    //       setHasPermission(status !== 'denied');
-    //     });
-    
-    //     RNAndroidNotificationListener.onNotificationReceived(
-    //       handleNotificationReceived,
-    //     );
-    
-    //     AppState.addEventListener('change', handleAppStateChange);
-    
-    //     return () => {
-    //       AppState.removeEventListener('change', handleAppStateChange);
-    //     };
-    //   }, []); 
 
     sendData = (props) => {
         console.log("Getting data");
@@ -64,15 +60,7 @@ export default class App extends Component {
     }
 
     componentDidMount() {
-        fetch('https://reactnative.dev/movies.json')
-            .then((response) => response.json())
-            .then((json) => {
-                this.setState({ data: json.movies });
-            })
-            .catch((error) => console.error(error))
-            .finally(() => {
-                this.setState({ isLoading: false });
-            });
+        console.log("App started");
     }
 
     render() {
@@ -95,13 +83,11 @@ export default class App extends Component {
                         }}
                     />
                     <Text style={{ backgroundColor: `rgb(${colors.red},${colors.green},${colors.blue})` }}></Text>
-                    {/* <FlatList
-                        data={data}
-                        keyExtractor={({ id }, index) => id}
-                        renderItem={({ item }) => (
-                            <Text>{item.title}, {item.releaseYear}</Text>
-                        )}
-                    /> */}
+                    <Separator />
+                    <Button
+                        title="request permissions"
+                        onPress={requestAllPermissions}
+                        style={styles.button} />
                 </>)}
             </View>
         );
