@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4a410a0a-4265-4e21-8489-71fc231380b8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aJIMDDka8FqXSCn9zLffTOVuPz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../eius_new" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="kool" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="kool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/spotify.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4a410a0a-4265-4e21-8489-71fc231380b8" name="Default Changelist" comment="" />
+      <created>1586447219396</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586447219396</updated>
+      <workItem from="1586447222564" duration="596000" />
+      <workItem from="1586501299707" duration="589000" />
+      <workItem from="1586676047740" duration="18813000" />
+      <workItem from="1586760263596" duration="605000" />
+      <workItem from="1587627346987" duration="4107000" />
+      <workItem from="1587707878141" duration="607000" />
+      <workItem from="1588253323351" duration="3704000" />
+      <workItem from="1588427524005" duration="99000" />
+      <workItem from="1588429723509" duration="2426000" />
+      <workItem from="1588492056819" duration="14511000" />
+      <workItem from="1588575339560" duration="12000" />
+      <workItem from="1588756041153" duration="16936000" />
+      <workItem from="1588920953227" duration="150000" />
+      <workItem from="1589211160519" duration="1700000" />
+      <workItem from="1589266543263" duration="349000" />
+      <workItem from="1589370017274" duration="945000" />
+      <workItem from="1589526828570" duration="21000" />
+      <workItem from="1589555458704" duration="195000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2338" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586691033176">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2338" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586691033176" />
+    <state x="2587" y="344" width="576" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588772457933">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2587" y="344" width="576" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1588772457933" />
+    <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1589526847786">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1589526847786" />
+    <state width="937" height="354" key="GridCell.Tab.0.bottom" timestamp="1586691372586">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="937" height="354" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586691372586" />
+    <state width="937" height="354" key="GridCell.Tab.0.center" timestamp="1586691372586">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="937" height="354" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586691372586" />
+    <state width="937" height="354" key="GridCell.Tab.0.left" timestamp="1586691372586">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="937" height="354" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586691372586" />
+    <state width="937" height="354" key="GridCell.Tab.0.right" timestamp="1586691372586">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="937" height="354" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586691372586" />
+    <state width="937" height="354" key="GridCell.Tab.1.bottom" timestamp="1586691372587">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="937" height="354" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586691372587" />
+    <state width="937" height="354" key="GridCell.Tab.1.center" timestamp="1586691372587">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="937" height="354" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586691372587" />
+    <state width="937" height="354" key="GridCell.Tab.1.left" timestamp="1586691372586">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="937" height="354" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586691372586" />
+    <state width="937" height="354" key="GridCell.Tab.1.right" timestamp="1586691372587">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="937" height="354" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1586691372587" />
+    <state x="2020" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588508342226">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2020" y="98" width="1720" height="882" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1588508342226" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/clock.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/kool$kool.coverage" NAME="kool Coverage Results" MODIFIED="1586691037565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
