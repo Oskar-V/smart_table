@@ -1,0 +1,49 @@
+Registering with google 
+Create new prject:
+https://console.actions.google.com/u/0/
+Register product on google developers console page with "device registration"
+Get credentials
+Enable Oauth consent on API Credetials Oauth consent screen
+
+On rasp
+check input and output with 
+arecord -l
+aplay -l
+change to desired input and output in config
+nano /home/pi/.asoundrc
+check levels with ALSA mixer
+install PulseAudio
+sudo apt install PulseAudio
+
+make directori for googleassistan
+mkdir ~/googleassistant
+add credentials which were received earlier to
+nano ~/googleassistant/credentials.json
+
+install python3 environment 
+sudo apt-get install python3-dev python3-venv libssl-dev libffi-dev libportaudio2
+and enable environtment
+python3 -m venv env
+
+ensure latest version of pip and setuptools
+env/bin/python3 -m pip install --upgrade pip setuptools --upgrade
+
+to get into python env use
+source env/bin/activate
+
+install google voice using
+python3 -m pip install --upgrade google-assistant-library
+python3 -m pip install --upgrade google-assistant-sdk[samples]
+
+authorize rasp for google assistant using 
+python3 -m pip install --upgrade google-auth-oauthlib[tool]
+this generates a url visit url to authorize
+using the key on your google account which was generated earlier
+
+entering the command and replacing the fields prjectid and deviceid to the ones the device was register with lets us use push to talk the key being ENTER
+googlesamples-assistant-pushtotalk --project-id <projectid> --device-model-id <deviceid>
+
+to use the google assistant create a bash script in your home directory wiht the following commands and running that bash script activates google assistant in push to talk mode
+source env/bin/activate
+googlesamples-assistant-pushtotalk
+
