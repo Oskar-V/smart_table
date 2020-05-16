@@ -31,6 +31,4 @@ Item | Cost | Transport | New Budget
 * Phone control interface aesthetics
 * Web interface controls
 
-
 ---
-Test
